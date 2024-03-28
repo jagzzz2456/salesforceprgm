@@ -1,0 +1,23 @@
+public class HiringManagerUtility 
+{
+    
+   Public static void createHrrecord(string HrName,String HrLocation,string Hrphone,string EmploymentType,
+                                     string HREmail,string Designation, decimal CTC)
+    {
+       if(HrName !=null && hrPhone !=null && hrEmail !=null)
+       {
+           Hiring_Manager__c HrRec =new Hiring_Manager__c();
+            hrRec.HR_Email__c= HREmail;
+        hrRec.Current_CTC__c=CTC;
+        hrRec.Name=HrName;
+        hrRec.HR_Phone_Number__c=Hrphone;
+        hrRec.Designation__c= Designation;
+        HrRec.Location_Hiring__c=HrLocation;
+        Hrrec.Employee__c=EmploymentType;
+          Insert hrRec;
+           system.debug('sucess  ' +hrRec.id);
+    }
+                
+    }
+
+}
